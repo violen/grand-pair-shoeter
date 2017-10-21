@@ -441,12 +441,12 @@ Prefab:
     - target: {fileID: 224923941621338100, guid: 06f187a88a95ef64a97e4788de0b167d,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1097
+      value: 1132
       objectReference: {fileID: 0}
     - target: {fileID: 224923941621338100, guid: 06f187a88a95ef64a97e4788de0b167d,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 378.8
+      value: 398
       objectReference: {fileID: 0}
     - target: {fileID: 224923941621338100, guid: 06f187a88a95ef64a97e4788de0b167d,
         type: 2}
@@ -481,12 +481,12 @@ Prefab:
     - target: {fileID: 224923941621338100, guid: 06f187a88a95ef64a97e4788de0b167d,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1097
+      value: 1132
       objectReference: {fileID: 0}
     - target: {fileID: 224923941621338100, guid: 06f187a88a95ef64a97e4788de0b167d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 378.8
+      value: 398
       objectReference: {fileID: 0}
     - target: {fileID: 224923941621338100, guid: 06f187a88a95ef64a97e4788de0b167d,
         type: 2}
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14105f89ee3fbaf4d84e38ee2bdca660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 0}
+  child: {fileID: 1153319969420544, guid: 06f187a88a95ef64a97e4788de0b167d, type: 2}
   spawns: []
   spawnTime: 3
   childrenList: []

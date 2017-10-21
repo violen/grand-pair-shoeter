@@ -33,7 +33,4 @@ public class ChildController : MonoBehaviour {
             child.transform.position -= Vector3.left * childSpeed * 1 * Time.deltaTime;
         }
     }
-
-
-
 }
