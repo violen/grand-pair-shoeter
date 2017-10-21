@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -735,6 +735,26 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83558fcf193ec7f44b4f8cd288b5396a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1326621482 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1450811740370590, guid: a645e0145a6f41840a8ba565014fff15,
+    type: 2}
+  m_PrefabInternal: {fileID: 1344196571}
+--- !u!114 &1326621487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1326621482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d13ef197a53c44bc5ce86c735b469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grandpaMoveSpeed: 400
+  bullet: {fileID: 1729116882305718, guid: e8632cecd1719b64ea59da71b2e7b7ed, type: 2}
+  bulletMoveSpeed: 100
+  timeBetweenShots: 0.5
 --- !u!1001 &1344196571
 Prefab:
   m_ObjectHideFlags: 0
@@ -744,7 +764,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4845577949793458, guid: a645e0145a6f41840a8ba565014fff15, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -500
+      value: -379
       objectReference: {fileID: 0}
     - target: {fileID: 4845577949793458, guid: a645e0145a6f41840a8ba565014fff15, type: 2}
       propertyPath: m_LocalPosition.y

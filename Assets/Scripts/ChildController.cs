@@ -41,7 +41,7 @@ public class ChildController : MonoBehaviour {
                 var pos = myChild.transform.position;
                 myChild.transform.position = new Vector3(pos.x, pos.y, 1);
             }
-            Debug.Log("Childpos: " + myChild.transform.position.x);
+            //Debug.Log("Childpos: " + myChild.transform.position.x);
             float distance = myChild.transform.position.z - Camera.main.transform.position.z;
             Vector3 leftmost = Camera.main.ViewportToWorldPoint(new Vector3(-0.1f, 0, distance));
             if (myChild.transform.position.x < leftmost.x)
