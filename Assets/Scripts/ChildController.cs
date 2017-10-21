@@ -1,4 +1,6 @@
-﻿using UnityEngine.SceneManagement;
+﻿using System.ComponentModel.Design.Serialization;
+using System.Runtime.CompilerServices;
+using UnityEngine.SceneManagement;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,11 +14,17 @@ public class ChildController : MonoBehaviour {
     public List<GameObject> childrenList;
     private float childSpeed = 6f;
     public int maxSpawnSize;
+    public static ChildController instance;
 
     void Start()
     {
         // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
         InvokeRepeating("Spawn", spawnTime, spawnTime);
+
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     void Spawn()
@@ -41,7 +49,7 @@ public class ChildController : MonoBehaviour {
                 var pos = myChild.transform.position;
                 myChild.transform.position = new Vector3(pos.x, pos.y, 1);
             }
-            Debug.Log("Childpos: " + myChild.transform.position.x);
+            //Debug.Log("Childpos: " + myChild.transform.position.x);
             float distance = myChild.transform.position.z - Camera.main.transform.position.z;
             Vector3 leftmost = Camera.main.ViewportToWorldPoint(new Vector3(-0.1f, 0, distance));
             if (myChild.transform.position.x < leftmost.x)
@@ -53,5 +61,10 @@ public class ChildController : MonoBehaviour {
             childrenList.Remove(childToDestroy);
             Destroy(childToDestroy);
         }
+    }
+
+    public static ChildController getInstance()
+    {
+        return instance;
     }
 }
