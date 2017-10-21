@@ -232,8 +232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b00ab622bea8b54e956bd2846029708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kids: {fileID: 1767209768695448, guid: 83558fcf193ec7f44b4f8cd288b5396a, type: 2}
-  interval: 3
 --- !u!1 &437773471 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1767209768695448, guid: 83558fcf193ec7f44b4f8cd288b5396a,
@@ -393,8 +391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b00ab622bea8b54e956bd2846029708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kids: {fileID: 1767209768695448, guid: 83558fcf193ec7f44b4f8cd288b5396a, type: 2}
-  interval: 3
 --- !u!1001 &823212770
 Prefab:
   m_ObjectHideFlags: 0
@@ -458,6 +454,10 @@ Prefab:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.86
       objectReference: {fileID: 0}
+    - target: {fileID: 1767209768695448, guid: 83558fcf193ec7f44b4f8cd288b5396a, type: 2}
+      propertyPath: m_TagString
+      value: Child
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83558fcf193ec7f44b4f8cd288b5396a, type: 2}
   m_IsPrefabParent: 0
@@ -500,6 +500,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114281447025906116, guid: e8632cecd1719b64ea59da71b2e7b7ed,
+        type: 2}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 437773471}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8632cecd1719b64ea59da71b2e7b7ed, type: 2}
   m_IsPrefabParent: 0
@@ -543,8 +548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b00ab622bea8b54e956bd2846029708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kids: {fileID: 1767209768695448, guid: 83558fcf193ec7f44b4f8cd288b5396a, type: 2}
-  interval: 3
 --- !u!1 &1438863769
 GameObject:
   m_ObjectHideFlags: 0
