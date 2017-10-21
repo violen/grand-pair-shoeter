@@ -55,7 +55,7 @@ public class GrandpaController : MonoBehaviour {
         float newY = Mathf.Clamp(this.transform.position.y, yMinPosition, yMaxPosition);
         this.transform.position = new Vector3(newX, newY, transform.position.z);
 
-        if (Time.time >= timestamp && Input.GetKeyDown(KeyCode.Space))
+        if (/*Time.time >= timestamp && */Input.GetKeyDown(KeyCode.Space))
         {
             GameObject shoot = Instantiate(bullet, this.transform.position, Quaternion.identity) as GameObject;
             shoot.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletMoveSpeed, 0);
