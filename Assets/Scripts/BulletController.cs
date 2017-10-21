@@ -7,12 +7,17 @@ using UnityEngine.UI;
 
 public class BulletController : MonoBehaviour {
 
-    public Text text;
+    public Text lifepoints;
     
     // Use this for initialization
 	void Start () {
-		
-	}
+        GameObject lifepoints = GameObject.FindWithTag("Lifepoints");
+        if(lifepoints != null)
+        {
+            print(lifepoints);
+        }
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -25,7 +30,9 @@ public class BulletController : MonoBehaviour {
             GameObject child = collision.gameObject;
             ChildController.getInstance().childrenList.Remove(child);
             Destroy(child);
-            Destroy(this);
+            Destroy(gameObject);
+            LifepointsController.AddScore();
+            
         }
     }
 }
