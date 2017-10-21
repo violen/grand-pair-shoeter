@@ -7,6 +7,8 @@ public class GrandpaController : MonoBehaviour {
     public float grandpaMoveSpeed = 4f;
     float xMinPosition;
     float xMaxPosition;
+    float yMinPosition;
+    float yMaxPosition;
 
     // Use this for initialization
     void Start()
@@ -14,10 +16,14 @@ public class GrandpaController : MonoBehaviour {
         float distance = transform.position.z - Camera.main.transform.position.z;
         // TODO: grandpa should stop movement at 10% to the left and at 80% to the right of the camera.
         // the values needs to be changed dependent on the background (lawn)
-        Vector3 leftmost = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, 0, -10));
-        Vector3 rightmost = Camera.main.ViewportToWorldPoint(new Vector3(0.8f, 0, -10));
+        Vector3 leftmost = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, 0, distance));
+        Vector3 rightmost = Camera.main.ViewportToWorldPoint(new Vector3(0.7f, 0, distance));
         xMinPosition = leftmost.x;
         xMaxPosition = rightmost.x;
+        Vector3 bottommost = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.05f, distance));
+        Vector3 topmost = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.95f, distance));
+        yMinPosition = bottommost.y;
+        yMaxPosition = topmost.y;
     }
 
     // Update is called once per frame
@@ -41,6 +47,7 @@ public class GrandpaController : MonoBehaviour {
         }
 
         float newX = Mathf.Clamp(this.transform.position.x, xMinPosition, xMaxPosition);
-        this.transform.position = new Vector3(newX, this.transform.position.y, transform.position.z);
+        float newY = Mathf.Clamp(this.transform.position.y, yMinPosition, yMaxPosition);
+        this.transform.position = new Vector3(newX, newY, transform.position.z);
     }
 }
