@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: cfe77c7f1861149418daf8507c3a2788
-timeCreated: 1508590386
+guid: b5a97e821d043e4459139cf1279ffcbd
+timeCreated: 1508608585
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Asset Kinder_0
-    21300002: Asset Kinder_1
+    21300000: Asset Kinder 1_0
+    21300002: Asset Kinder 1_1
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -80,13 +80,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asset Kinder_0
+      name: Asset Kinder 1_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 8
-        width: 108
-        height: 186
+        x: 9
+        y: 15
+        width: 178
+        height: 308
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -94,13 +94,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Asset Kinder_1
+      name: Asset Kinder 1_1
       rect:
         serializedVersion: 2
-        x: 125
-        y: 7
-        width: 108
-        height: 186
+        x: 207
+        y: 13
+        width: 178
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
