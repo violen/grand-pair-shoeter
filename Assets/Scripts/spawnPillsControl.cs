@@ -20,7 +20,10 @@ public class spawnPillsControl : MonoBehaviour {
         int spawnPointIndex = UnityEngine.Random.Range(0, spawns.Length);
 
         // Create an instance of the pill prefab at the randomly selected spawn point's position and rotation.
-        pillList.Add(Instantiate(pill, spawns[spawnPointIndex].transform.position, spawns[spawnPointIndex].transform.rotation));
+        if (pillList.Count < 1)
+        {
+            pillList.Add(Instantiate(pill, spawns[spawnPointIndex].transform.position, spawns[spawnPointIndex].transform.rotation));
+        }
     }
 
     // Update is called once per frame
