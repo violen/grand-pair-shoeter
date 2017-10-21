@@ -43,7 +43,9 @@ public class ChildController : MonoBehaviour {
 
         foreach ( var myChild in childrenList )
         {
-            myChild.transform.position += Vector3.left * childSpeed * 3 * Time.deltaTime;
+            //var speed = myChild.gameObject.GetComponent<ChildModel>().speed;
+            var newPos = Vector3.left * childSpeed * 3 * Time.deltaTime;
+            myChild.transform.position += newPos;
             if (myChild.transform.position.z < 1)
             {
                 var pos = myChild.transform.position;

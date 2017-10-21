@@ -8,16 +8,20 @@ public class spawnPillsControl : MonoBehaviour {
     public Transform[] spawns;
     public float spawnTime;
     public List<GameObject> pillList;
+    public static spawnPillsControl instance;
 
  
     // Use this for initialization
     void Start () {
+        if (instance == null)
+        {
+            instance = this;
+        }
         if (pillList.Count < 1)
         {
             spawnTime = UnityEngine.Random.Range(0, 45);
             InvokeRepeating("Spawn", spawnTime, spawnTime);
         }
-        
     }
 
     void Spawn()
@@ -36,4 +40,9 @@ public class spawnPillsControl : MonoBehaviour {
     void Update () {
 		
 	}
+
+    public static spawnPillsControl getInstance()
+    {
+        return instance;
+    }
 }
