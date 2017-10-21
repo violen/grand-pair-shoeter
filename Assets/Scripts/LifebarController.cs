@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LifebarController : MonoBehaviour
 {
@@ -21,8 +22,16 @@ public class LifebarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lifebarYSize = lifepointsController.GetLifepoints();
-        GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, lifebarYSize);
+        lifebarYSize = lifepointsController.GetLifepoints() / 100;
+        if(lifebarYSize > 0) { 
+            this.GetComponent<Image>().fillAmount = lifebarYSize;
+        }
+        /* TODO: make Lose-Scene and remove comments
+        else
+        {
+            SceneManager.LoadScene("Lose");
+        }
+        */
     }
 
 }

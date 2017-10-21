@@ -6,19 +6,21 @@ public class spawnPillsControl : MonoBehaviour {
 
     public GameObject pill;
     public Transform[] spawns;
-    public float spawnTime = 3f;
+    public float spawnTime;
     public List<GameObject> pillList;
     public static spawnPillsControl instance;
 
-    //public float dropChance = Range(10f, 50f);
-
+ 
     // Use this for initialization
     void Start () {
-        InvokeRepeating("Spawn", spawnTime, spawnTime);
-
         if (instance == null)
         {
             instance = this;
+        }
+        if (pillList.Count < 1)
+        {
+            spawnTime = UnityEngine.Random.Range(0, 45);
+            InvokeRepeating("Spawn", spawnTime, spawnTime);
         }
     }
 

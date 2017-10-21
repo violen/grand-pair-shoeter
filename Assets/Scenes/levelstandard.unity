@@ -289,7 +289,7 @@ Transform:
   m_LocalScale: {x: 1, y: 897, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &252818002
 GameObject:
@@ -374,7 +374,7 @@ MonoBehaviour:
   - {fileID: 2079520036}
   spawnTime: 3
   childrenList: []
-  childSpeed: 100
+  childSpeed: 6
   maxSpawnSize: 10
 --- !u!1 &547873188
 GameObject:
@@ -408,7 +408,7 @@ MonoBehaviour:
   - {fileID: 732699109}
   - {fileID: 1396631464}
   - {fileID: 252818003}
-  spawnTime: 3
+  spawnTime: 0
   pillList: []
 --- !u!4 &547873190
 Transform:
@@ -424,7 +424,7 @@ Transform:
   - {fileID: 1396631464}
   - {fileID: 252818003}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &683213105
 Prefab:
@@ -783,6 +783,21 @@ Prefab:
       value: 
       objectReference: {fileID: 114955182591599982, guid: 00e3a82c7e3fd354092a9dd73e9b0aec,
         type: 2}
+    - target: {fileID: 114693907841044118, guid: d6dd277ca513d7e488d629400ddc3a2c,
+        type: 2}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114693907841044118, guid: d6dd277ca513d7e488d629400ddc3a2c,
+        type: 2}
+      propertyPath: m_FillMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114693907841044118, guid: d6dd277ca513d7e488d629400ddc3a2c,
+        type: 2}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114265993080370692, guid: d6dd277ca513d7e488d629400ddc3a2c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d6dd277ca513d7e488d629400ddc3a2c, type: 2}
@@ -832,7 +847,7 @@ Prefab:
     - target: {fileID: 224082384981022728, guid: 00e3a82c7e3fd354092a9dd73e9b0aec,
         type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224082384981022728, guid: 00e3a82c7e3fd354092a9dd73e9b0aec,
         type: 2}
@@ -1143,10 +1158,10 @@ RectTransform:
   m_LocalPosition: {x: 425.5, y: 319, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 171644026}
   - {fileID: 257756935}
+  - {fileID: 171644026}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
