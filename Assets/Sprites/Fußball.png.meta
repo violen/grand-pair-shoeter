@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 04d44fd724c90ac4eaa0a41eddafc567
-timeCreated: 1508618744
+guid: 1d25e86acc27341469677bebffebaa7c
+timeCreated: 1508619804
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: grandPaBooting_0
-    21300002: grandPaBooting_1
-    21300004: grandPaBooting_2
+    21300000: "Fu\xDFball_0"
+    21300002: "Fu\xDFball_1"
+    21300004: "Fu\xDFball_2"
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -77,35 +77,17 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grandPaBooting_0
+      name: "Fu\xDFball_0"
       rect:
         serializedVersion: 2
-        x: 18
-        y: 10
-        width: 66
-        height: 198
+        x: 6
+        y: 40
+        width: 178
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,13 +95,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: grandPaBooting_2
+      name: "Fu\xDFball_1"
       rect:
         serializedVersion: 2
-        x: 120
-        y: 12
-        width: 83
-        height: 195
+        x: 197
+        y: 36
+        width: 170
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Fu\xDFball_2"
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 42
+        width: 178
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

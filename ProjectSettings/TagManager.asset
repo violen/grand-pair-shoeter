@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Child
   - Lifepoints
+  - Pille
+  - Undefined
   layers:
   - Default
   - TransparentFX
