@@ -5,9 +5,11 @@ using UnityEngine;
 public class spawnPillsControl : MonoBehaviour {
 
     public GameObject pill;
-    public GameObject[] spawns;
+    public Transform[] spawns;
     public float spawnTime = 3f;
     public List<GameObject> pillList;
+
+    //public float dropChance = Range(10f, 50f);
 
     // Use this for initialization
     void Start () {
@@ -22,7 +24,7 @@ public class spawnPillsControl : MonoBehaviour {
         // Create an instance of the pill prefab at the randomly selected spawn point's position and rotation.
         if (pillList.Count < 1)
         {
-            pillList.Add(Instantiate(pill, spawns[spawnPointIndex].transform.position, spawns[spawnPointIndex].transform.rotation));
+            pillList.Add(Instantiate(pill, spawns[spawnPointIndex].position, spawns[spawnPointIndex].rotation));
         }
     }
 

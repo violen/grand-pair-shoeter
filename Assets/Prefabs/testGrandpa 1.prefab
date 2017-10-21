@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 68274374328138758}
   - component: {fileID: 50415588156990510}
   - component: {fileID: 95214569997580650}
+  - component: {fileID: 114125173102871698}
   m_Layer: 0
   m_Name: testGrandpa 1
   m_TagString: Untagged
@@ -97,6 +98,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114125173102871698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1130208931216870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d13ef197a53c44bc5ce86c735b469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grandpaMoveSpeed: 400
+  bullet: {fileID: 1729116882305718, guid: e8632cecd1719b64ea59da71b2e7b7ed, type: 2}
+  bulletMoveSpeed: 5000
+  timeBetweenShots: 0.5
 --- !u!212 &212590683311167666
 SpriteRenderer:
   m_ObjectHideFlags: 1
