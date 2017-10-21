@@ -5,10 +5,15 @@ using UnityEngine;
 public class GrandpaController : MonoBehaviour {
 
     public float grandpaMoveSpeed = 4f;
-    float xMinPosition;
-    float xMaxPosition;
-    float yMinPosition;
-    float yMaxPosition;
+    public GameObject bullet;
+    public float bulletMoveSpeed = 5f;
+    public float timeBetweenShots = 0.5f;
+
+    private float xMinPosition;
+    private float xMaxPosition;
+    private float yMinPosition;
+    private float yMaxPosition;
+    private float timestamp;
 
     // Use this for initialization
     void Start()
@@ -49,5 +54,12 @@ public class GrandpaController : MonoBehaviour {
         float newX = Mathf.Clamp(this.transform.position.x, xMinPosition, xMaxPosition);
         float newY = Mathf.Clamp(this.transform.position.y, yMinPosition, yMaxPosition);
         this.transform.position = new Vector3(newX, newY, transform.position.z);
+
+        if (Time.time >= timestamp && Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject shoot = Instantiate(bullet, this.transform.position, Quaternion.identity) as GameObject;
+            shoot.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletMoveSpeed, 0);
+            timestamp = Time.time + timeBetweenShots;
+        }
     }
 }
