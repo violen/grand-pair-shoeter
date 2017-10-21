@@ -20,10 +20,8 @@ public class ChildModel : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger model:" + collision.gameObject.name + " with TAG " + collision.gameObject.tag);
         if (collision.gameObject.tag == "Pille")
         {
-            Debug.Log("Pille Triggered!");
             speed = speed * 2;
             spawnPillsControl.getInstance().pillList.Remove(collision.gameObject);
             Destroy(collision.gameObject);

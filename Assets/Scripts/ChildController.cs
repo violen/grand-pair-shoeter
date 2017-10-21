@@ -12,7 +12,7 @@ public class ChildController : MonoBehaviour {
     public Transform[] spawns;
     public float spawnTime = 3f;
     public List<GameObject> childrenList;
-    public float childSpeed = 6f;
+    public float childSpeed = 20f;
     public int maxSpawnSize;
     public static ChildController instance;
 
@@ -43,9 +43,12 @@ public class ChildController : MonoBehaviour {
 
         foreach ( var myChild in childrenList )
         {
-            //var speed = myChild.gameObject.GetComponent<ChildModel>().speed;
+            if (myChild == null) continue;
+
+            ChildModel model = myChild.GetComponent<ChildModel>();
+            var speed = model.speed;
             var newPos = Vector3.left * childSpeed * 3 * Time.deltaTime;
-            myChild.transform.position += newPos;
+            myChild.transform.position += newPos * speed;
             if (myChild.transform.position.z < 1)
             {
                 var pos = myChild.transform.position;
