@@ -15,7 +15,7 @@ public class LifepointsController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         text.text = "Score: " + score + " \n " + "Lifepoints: " + lifepoints;
-        InvokeRepeating("ContinuouslyReduceLifepoints", 1f, 1f);
+        InvokeRepeating("ContinuouslyReduceLifepoints", 0.5f, 0.5f);
         InvokeRepeating("GetLife", 0, 3);
     }
 	
@@ -33,6 +33,11 @@ public class LifepointsController : MonoBehaviour {
     public float GetLifepoints()
     {
         return lifepoints;
+    }
+
+    public void AddScore()
+    {
+        score *= 100;
     }
 
     // Testmethode, um die Pillen zu simulieren

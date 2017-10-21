@@ -21,9 +21,9 @@ public class spawnPillsControl : MonoBehaviour {
         // Find a random index between zero and one less than the number of spawn points.
         int spawnPointIndex = UnityEngine.Random.Range(0, spawns.Length);
 
-        if (pillList.Count < 3)
+        // Create an instance of the pill prefab at the randomly selected spawn point's position and rotation.
+        if (pillList.Count < 1)
         {
-            // Create an instance of the pill prefab at the randomly selected spawn point's position and rotation.
             pillList.Add(Instantiate(pill, spawns[spawnPointIndex].position, spawns[spawnPointIndex].rotation));
         }
     }
