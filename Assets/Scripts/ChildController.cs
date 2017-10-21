@@ -6,7 +6,7 @@ using UnityEngine;
 public class ChildController : MonoBehaviour {
 
     public GameObject child;
-    public Transform[] spawns;
+    public GameObject[] spawns;
     public float spawnTime = 3f;
     public List<GameObject> childrenList;
     private float childSpeed = 2f;
@@ -23,7 +23,7 @@ public class ChildController : MonoBehaviour {
         int spawnPointIndex = UnityEngine.Random.Range(0, spawns.Length);
 
         // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-        childrenList.Add(Instantiate(child, spawns[spawnPointIndex].position, spawns[spawnPointIndex].rotation));
+        childrenList.Add(Instantiate(child, spawns[spawnPointIndex].transform.position, spawns[spawnPointIndex].transform.rotation));
     }
 
     void Update ()
