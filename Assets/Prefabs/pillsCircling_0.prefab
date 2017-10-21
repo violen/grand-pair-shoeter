@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58346840381569292}
   m_Layer: 0
   m_Name: pillsCircling_0
-  m_TagString: Untagged
+  m_TagString: Undefined
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
