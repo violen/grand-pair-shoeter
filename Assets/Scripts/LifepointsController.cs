@@ -7,12 +7,14 @@ public class LifepointsController : MonoBehaviour {
 
     public Text text;
     public static float lifepoints = 100f;
+    public int score = 0;
+
     int maxLifepoints = 100;
     float r;
 
 	// Use this for initialization
 	void Start () {
-        text.text = "Lifepoints: " + lifepoints;
+        text.text = "Score: " + score + " \n " + "Lifepoints: " + lifepoints;
         InvokeRepeating("ContinuouslyReduceLifepoints", 1f, 1f);
         InvokeRepeating("GetLife", 0, 3);
     }
@@ -25,7 +27,7 @@ public class LifepointsController : MonoBehaviour {
     void ContinuouslyReduceLifepoints()
     {
         lifepoints--;
-        text.text = "Lifepoints: " + lifepoints;
+        text.text = "Score: " + score + " \n " + "Lifepoints: " + lifepoints;
     }
 
     public float GetLifepoints()
@@ -45,6 +47,7 @@ public class LifepointsController : MonoBehaviour {
             {
                 lifepoints = lifepoints - (lifepoints - maxLifepoints);
             }
+            score += 100;
         }
     }
 }

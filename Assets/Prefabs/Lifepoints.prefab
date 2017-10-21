@@ -61,7 +61,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lifepoints: "100"'
+  m_Text: 'Score: 0
+
+    Lifepoints: 100'
 --- !u!114 &114955182591599982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,6 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 114843682974130262}
+  score: 0
 --- !u!222 &222424353217980636
 CanvasRenderer:
   m_ObjectHideFlags: 1
