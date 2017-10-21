@@ -372,10 +372,10 @@ MonoBehaviour:
   - {fileID: 1065247326}
   - {fileID: 193026844}
   - {fileID: 2079520036}
-  spawnTime: 3
+  spawnTime: 1.5
   childrenList: []
-  childSpeed: 6
-  maxSpawnSize: 10
+  childSpeed: 100
+  maxSpawnSize: 40
 --- !u!1 &547873188
 GameObject:
   m_ObjectHideFlags: 0
