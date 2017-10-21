@@ -38,8 +38,18 @@ public class spawnPillsControl : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        foreach (var pill in pillList)
+        {
+            if (pill != null)
+            {
+                if (pill.transform.position.z < 1)
+                {
+                    var pos = pill.transform.position;
+                    pill.transform.position = new Vector3(pos.x, pos.y, 1);
+                }
+            }
+        }
+    }
 
     public static spawnPillsControl getInstance()
     {

@@ -62,4 +62,15 @@ public class GrandpaController : MonoBehaviour {
             timestamp = Time.time + timeBetweenShots;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Pille")
+        {
+            Debug.Log("Pille Triggered!");
+            LifepointsController.increaseLifePoints();
+            spawnPillsControl.getInstance().pillList.Remove(collision.gameObject);
+            Destroy(collision.gameObject);
+        }
+    }
 }
