@@ -24,6 +24,7 @@ public class BulletController : MonoBehaviour {
         if (collision.gameObject.tag == "Child"){
             GameObject child = collision.gameObject;
             ChildController.getInstance().childrenList.Remove(child);
+            Camera.main.GetComponent<Main>().killedAChild();
             Destroy(child);
             Destroy(gameObject);
             LifepointsController.AddScore();        

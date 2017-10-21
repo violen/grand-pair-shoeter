@@ -33,11 +33,17 @@ public class Main : MonoBehaviour {
         if (childrenKilled >= childrenToKill)
         {
             levelEnded = true;
+            Debug.Log("Level Ended");
         }
     }
 
     public void endGame()
     {
         // if last level scene!? end game -> show credits
+    }
+
+    public void killedAChild()
+    {
+        childrenKilled += 1;
     }
 }
