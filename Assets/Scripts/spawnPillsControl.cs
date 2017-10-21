@@ -8,12 +8,18 @@ public class spawnPillsControl : MonoBehaviour {
     public Transform[] spawns;
     public float spawnTime = 3f;
     public List<GameObject> pillList;
+    public static spawnPillsControl instance;
 
     //public float dropChance = Range(10f, 50f);
 
     // Use this for initialization
     void Start () {
         InvokeRepeating("Spawn", spawnTime, spawnTime);
+
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     void Spawn()
@@ -32,4 +38,9 @@ public class spawnPillsControl : MonoBehaviour {
     void Update () {
 		
 	}
+
+    public static spawnPillsControl getInstance()
+    {
+        return instance;
+    }
 }
