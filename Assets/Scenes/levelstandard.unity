@@ -980,10 +980,24 @@ Prefab:
       propertyPath: bulletMoveSpeed
       value: 1000
       objectReference: {fileID: 0}
-    - target: {fileID: 68274374328138758, guid: 3a0d664c920532f44821013191abfcaf,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61773391525584808, guid: 3a0d664c920532f44821013191abfcaf,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 61773391525584808, guid: 3a0d664c920532f44821013191abfcaf,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 61773391525584808, guid: 3a0d664c920532f44821013191abfcaf,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a0d664c920532f44821013191abfcaf, type: 2}
