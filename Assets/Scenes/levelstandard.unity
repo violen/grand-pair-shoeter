@@ -980,6 +980,11 @@ Prefab:
       propertyPath: bulletMoveSpeed
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 68274374328138758, guid: 3a0d664c920532f44821013191abfcaf,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a0d664c920532f44821013191abfcaf, type: 2}
   m_IsPrefabParent: 0
