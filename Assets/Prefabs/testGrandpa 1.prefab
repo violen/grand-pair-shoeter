@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grandpaMoveSpeed: 400
   bullet: {fileID: 1729116882305718, guid: e8632cecd1719b64ea59da71b2e7b7ed, type: 2}
-  bulletMoveSpeed: 5000
+  bulletMoveSpeed: 3000
   timeBetweenShots: 0.5
 --- !u!212 &212590683311167666
 SpriteRenderer:

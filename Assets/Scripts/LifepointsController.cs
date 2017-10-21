@@ -7,7 +7,7 @@ public class LifepointsController : MonoBehaviour {
 
     public Text text;
     public static float lifepoints = 100f;
-    public int score = 0;
+    static public int score = 0;
 
     int maxLifepoints = 100;
     float r;
@@ -35,9 +35,9 @@ public class LifepointsController : MonoBehaviour {
         return lifepoints;
     }
 
-    public void AddScore()
+    public static void AddScore()
     {
-        score *= 100;
+        score += 100;
     }
 
     // Testmethode, um die Pillen zu simulieren
