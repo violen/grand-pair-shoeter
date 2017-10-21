@@ -40,7 +40,7 @@ public class LifepointsController : MonoBehaviour {
         score += 100;
     }
 
-    // Testmethode, um die Pillen zu simulieren
+    /* Testmethode, um die Pillen zu simulieren
     void GetLife()
     {
         r = Random.value;
@@ -54,5 +54,5 @@ public class LifepointsController : MonoBehaviour {
             }
             score += 100;
         }
-    }
+    }*/
 }
