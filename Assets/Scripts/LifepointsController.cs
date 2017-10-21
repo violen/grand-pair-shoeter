@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,13 +21,12 @@ public class LifepointsController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-	}
+        lifepoints -= Time.deltaTime;
+    }
 
     void ContinuouslyReduceLifepoints()
-    {
-        lifepoints--;
-        text.text = "Score: " + score + " \n " + "Lifepoints: " + lifepoints;
+    {     
+        text.text = "Score: " + score + " \n " + "Lifepoints: " + (int) lifepoints;
     }
 
     public float GetLifepoints()
@@ -49,19 +49,23 @@ public class LifepointsController : MonoBehaviour {
         score += 100;
     }
 
-    /* Testmethode, um die Pillen zu simulieren
-    void GetLife()
+    public static void decreaseLifePoints(String eventname)
     {
-        r = Random.value;
-        if (r > 0.9)
+        var decrease = 0;
+        switch (eventname)
         {
-            lifepoints = lifepoints + 20;
-            print("Life is life");
-            if(lifepoints > maxLifepoints)
-            {
-                lifepoints = lifepoints - (lifepoints - maxLifepoints);
-            }
-            score += 100;
+            case "childhit":
+                decrease = 2;
+                break;
         }
-    }*/
+        if (decrease > 0)
+        {
+            if ((lifepoints - decrease) <= 0)
+            {
+                lifepoints = 0;
+                return;
+            }
+            lifepoints -= decrease;
+        }
+    }
 }
