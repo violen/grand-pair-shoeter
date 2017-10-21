@@ -12,11 +12,6 @@ public class BulletController : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         GameObject lifepoints = GameObject.FindWithTag("Lifepoints");
-        if(lifepoints != null)
-        {
-            print(lifepoints);
-        }
-        
     }
 	
 	// Update is called once per frame
@@ -31,8 +26,7 @@ public class BulletController : MonoBehaviour {
             ChildController.getInstance().childrenList.Remove(child);
             Destroy(child);
             Destroy(gameObject);
-            LifepointsController.AddScore();
-            
+            LifepointsController.AddScore();        
         }
     }
 }
