@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class BulletController : MonoBehaviour {
 
+    public AudioClip[] childScream;
     public Text lifepoints;
     
     // Use this for initialization
@@ -27,7 +28,14 @@ public class BulletController : MonoBehaviour {
             Camera.main.GetComponent<Main>().killedAChild();
             Destroy(child);
             Destroy(gameObject);
-            LifepointsController.AddScore();        
+            LifepointsController.AddScore();
+            float randomScream = UnityEngine.Random.value;
+            if(randomScream > 0.5f) { 
+                AudioSource.PlayClipAtPoint(childScream[0], Camera.main.transform.position, 1f);
+            } else
+            {
+                AudioSource.PlayClipAtPoint(childScream[1], Camera.main.transform.position, 1f);
+            }
         }
     }
 }
