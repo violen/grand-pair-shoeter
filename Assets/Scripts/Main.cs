@@ -12,6 +12,7 @@ public class Main : MonoBehaviour {
 
     private bool levelEnded = false;
     private bool gameEnded = false;
+    private bool gameOver = false;
 
     private bool showMenu = false;
     private bool gamePaused = false;
@@ -25,8 +26,9 @@ public class Main : MonoBehaviour {
     void Update()
     {
         // here goes main rendering
-        endLevel();
-        endGame();
+        EndLevel();
+        EndGame();
+        GameOver();
 
         if (Input.GetKeyDown("escape"))
         {
@@ -46,7 +48,7 @@ public class Main : MonoBehaviour {
         // here goes render for fixed rates
     }
 
-    public void endLevel()
+    public void EndLevel()
     {
         if (childrenKilled >= childrenToKill)
         {
@@ -93,7 +95,7 @@ public class Main : MonoBehaviour {
         return false;
     }
 
-    public void endGame()
+    public void EndGame()
     {
         // if last level scene!? end game -> show credits
     }
@@ -128,5 +130,10 @@ public class Main : MonoBehaviour {
 
             GUI.EndGroup();
         }
+    }
+
+    private void GameOver()
+    {
+
     }
 }

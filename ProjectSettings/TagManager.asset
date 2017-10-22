@@ -9,6 +9,7 @@ TagManager:
   - Pille
   - Undefined
   - Boss
+  - Shoe
   layers:
   - Default
   - TransparentFX
