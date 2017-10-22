@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Main : MonoBehaviour {
 
     public int childrenToKill = 20;
     private int childrenKilled = 0;
+    private bool bossDefeated = false;
 
     private bool levelEnded = false;
     private bool gameEnded = false;
@@ -14,10 +16,14 @@ public class Main : MonoBehaviour {
     private bool showMenu = false;
     private bool gamePaused = false;
 
+    private String currentLevelName;
+
 	// Use this for initialization
 	void Start () {
         Screen.SetResolution(1024, 768, true, 60);
-	}
+
+        currentLevelName = SceneManager.GetActiveScene().name;
+    }
 
     // Update is called once per frame
     void Update()
@@ -48,16 +54,41 @@ public class Main : MonoBehaviour {
     {
         if (childrenKilled >= childrenToKill)
         {
-            levelEnded = true;
-            Debug.Log("Level Ended");
-            if (SceneManager.GetActiveScene().name == "levelstandard")
+            if (bossDefeated)
             {
-                FindObjectOfType<LoadManager>().LoadLevel("strandlevel");
-            } else if (SceneManager.GetActiveScene().name == "strandlevel")
+                levelEnded = true;
+                Debug.Log("Level Ended");
+                if (currentLevelName == "levelstandard")
+                {
+                    FindObjectOfType<LoadManager>().LoadLevel("strandlevel");
+                }
+                else if (currentLevelName == "strandlevel")
+                {
+                    FindObjectOfType<LoadManager>().LoadLevel("fussball");
+                }
+            } else
             {
-                FindObjectOfType<LoadManager>().LoadLevel("fussball");
+                if (LevelHasBoss())
+                {
+                    BossSpawn.GetInstance().ReleaseTheBeast();
+                } else
+                {
+                    // fallback if not all lvls get a Boss ;)
+                    levelEnded = true;
+                }
             }
+            
         }
+    }
+
+    private bool LevelHasBoss()
+    {
+        String[] bossLevels = { "none", /* "levelstandard" , "strandlevel", "fussball" */};
+        foreach (var level in bossLevels)
+        {
+            if (level.Contains(currentLevelName)) return true;
+        }
+        return false;
     }
 
     public void endGame()
