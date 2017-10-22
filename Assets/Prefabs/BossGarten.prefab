@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114398223663944304}
   m_Layer: 0
   m_Name: BossGarten
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -117,10 +117,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3dc1dc9540f9a548913248e44b0e9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hitpoints: 22
   player: {fileID: 4324640524812076, guid: 3a0d664c920532f44821013191abfcaf, type: 2}
   bossMoveSpeed: 80
   bossScream: {fileID: 8300000, guid: b7c7e8e257733ac4e81694c6cdae4c59, type: 3}
+  hitShoe: {fileID: 8300000, guid: d9ca5c52c9b5c2b46b3e13c0a54f8f51, type: 3}
+  hitBall: {fileID: 8300000, guid: 5094f9b0ed63420479e528a963ddff8c, type: 3}
 --- !u!212 &212609582143165176
 SpriteRenderer:
   m_ObjectHideFlags: 1

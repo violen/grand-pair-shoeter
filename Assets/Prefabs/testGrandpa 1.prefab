@@ -121,6 +121,7 @@ MonoBehaviour:
   bullet: {fileID: 1444273780763126, guid: b1e13c560d744cb44b8f089d5682eeae, type: 2}
   bulletMoveSpeed: 1500
   timeBetweenShots: 0.5
+  wurf: {fileID: 8300000, guid: a65c3557615b45d4f910f79f1a80d65a, type: 3}
 --- !u!212 &212873805268307098
 SpriteRenderer:
   m_ObjectHideFlags: 1
