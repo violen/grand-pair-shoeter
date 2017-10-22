@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrandpaController : MonoBehaviour {
+public class GrandpaControllerFussball : MonoBehaviour {
 
     public float grandpaMoveSpeed = 4f;
     public GameObject bullet;
     public float bulletMoveSpeed = 5f;
-    public float timeBetweenShots = 0.5f;
+    public float timeBetweenShots = 2f;
 
     private float xMinPosition;
     private float xMaxPosition;
@@ -61,7 +61,7 @@ public class GrandpaController : MonoBehaviour {
         if (Time.time >= timestamp && Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger("throw");
-            GameObject shoot = Instantiate(bullet, new Vector3((this.transform.position.x + 30f), this.transform.position.y, this.transform.position.z), Quaternion.identity) as GameObject;
+            GameObject shoot = Instantiate(bullet, new Vector3(this.transform.position.x+30f, (this.transform.position.y-150f), this.transform.position.z), Quaternion.identity) as GameObject;
             shoot.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletMoveSpeed, 0);
             timestamp = Time.time + timeBetweenShots;
         }

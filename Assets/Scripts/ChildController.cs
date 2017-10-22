@@ -10,9 +10,9 @@ public class ChildController : MonoBehaviour {
 
     public GameObject child;
     public Transform[] spawns;
-    public float spawnTime = 3f;
+    public float spawnTime;
     public List<GameObject> childrenList;
-    public float childSpeed = 20f;
+    public float childSpeed;
     public int maxSpawnSize;
     public static ChildController instance;
 

@@ -117,10 +117,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3dc1dc9540f9a548913248e44b0e9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoints: 20
+  hitpoints: 10
   player: {fileID: 4324640524812076, guid: 3a0d664c920532f44821013191abfcaf, type: 2}
   bossMoveSpeed: 100
-  bossScream: {fileID: 0}
+  bossScream: {fileID: 8300000, guid: 689c15efd547cce47ac59f18a18386d5, type: 3}
 --- !u!212 &212834562258583400
 SpriteRenderer:
   m_ObjectHideFlags: 1
