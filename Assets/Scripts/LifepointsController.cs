@@ -24,6 +24,12 @@ public class LifepointsController : MonoBehaviour {
         lifepoints -= Time.deltaTime;
     }
 
+    private void Awake()
+    {
+        // set lifepoints on level change
+        if (lifepoints < 100) lifepoints = 100f;
+    }
+
     void ContinuouslyReduceLifepoints()
     {     
         text.text = "Score: " + score + " \n " + "Lifepoints: " + (int) lifepoints;

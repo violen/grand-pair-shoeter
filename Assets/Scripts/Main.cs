@@ -53,6 +53,9 @@ public class Main : MonoBehaviour {
             if (SceneManager.GetActiveScene().name == "levelstandard")
             {
                 FindObjectOfType<LoadManager>().LoadLevel("strandlevel");
+            } else if (SceneManager.GetActiveScene().name == "strandlevel")
+            {
+                FindObjectOfType<LoadManager>().LoadLevel("fussball");
             }
         }
     }
