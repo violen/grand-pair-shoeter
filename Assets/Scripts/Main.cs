@@ -134,6 +134,15 @@ public class Main : MonoBehaviour {
 
     private void GameOver()
     {
+        float lifePoints = FindObjectOfType<LifepointsController>().GetLifepoints();
+        if (lifePoints <= 0)
+        {
+            // load GameOver
 
+
+            // placeholder show pause....
+            showMenu = true;
+            Time.timeScale = 0;
+        }
     }
 }
