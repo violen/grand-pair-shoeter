@@ -40,7 +40,7 @@ public class LifepointsController : MonoBehaviour {
         return lifepoints;
     }
 
-    public static void increaseLifePoints()
+    public static void IncreaseLifePoints()
     {
         lifepoints += 40;
         if (lifepoints > maxLifepoints)
@@ -55,7 +55,7 @@ public class LifepointsController : MonoBehaviour {
         score += 100;
     }
 
-    public static void decreaseLifePoints(String eventname)
+    public static void DecreaseLifePoints(String eventname)
     {
         var decrease = 0;
         switch (eventname)

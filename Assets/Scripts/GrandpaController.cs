@@ -72,7 +72,7 @@ public class GrandpaController : MonoBehaviour {
         if (collision.gameObject.tag == "Pille")
         {
             Debug.Log("Pille Triggered!");
-            LifepointsController.increaseLifePoints();
+            LifepointsController.IncreaseLifePoints();
             spawnPillsControl.getInstance().pillList.Remove(collision.gameObject);
             Destroy(collision.gameObject);
         }
@@ -82,7 +82,7 @@ public class GrandpaController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Child")
         {
-            LifepointsController.decreaseLifePoints("childhit");
+            LifepointsController.DecreaseLifePoints("childhit");
         }
         if (collision.gameObject.tag == "Boss")
         {

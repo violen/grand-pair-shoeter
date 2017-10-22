@@ -47,7 +47,7 @@ public class ChildController : MonoBehaviour {
 
             ChildModel model = myChild.GetComponent<ChildModel>();
             var speed = model.speed;
-            var newPos = Vector3.left * childSpeed * 3 * Time.deltaTime;
+            var newPos = Vector3.left * childSpeed * GetLevelFactor() * Time.deltaTime;
             myChild.transform.position += newPos * speed;
             if (myChild.transform.position.z < 1)
             {
@@ -71,5 +71,19 @@ public class ChildController : MonoBehaviour {
     public static ChildController getInstance()
     {
         return instance;
+    }
+
+    private float GetLevelFactor()
+    {
+        var sceneName = SceneManager.GetActiveScene().name;
+        switch(sceneName)
+        {
+            case "strandlevel":
+                return 4.5f;
+            case "fussball":
+                return 7f;
+            default:
+                return 3f;
+        }
     }
 }

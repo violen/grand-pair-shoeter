@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 64723160f70c04a4b9792d2379459051
-timeCreated: 1508640174
+guid: 3dfb476a761997a4dbb333316b15a031
+timeCreated: 1508670223
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Asset Kinder 1_0
     21300002: Asset Kinder 1_1
-  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -60,7 +59,6 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -69,25 +67,6 @@ TextureImporter:
     overridden: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -101,12 +80,12 @@ TextureImporter:
       name: Asset Kinder 1_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 14
-        width: 180
-        height: 309
+        x: 9
+        y: 15
+        width: 178
+        height: 308
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -116,9 +95,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 207
-        y: 14
-        width: 180
-        height: 309
+        y: 13
+        width: 178
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
