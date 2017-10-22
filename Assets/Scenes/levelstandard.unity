@@ -385,7 +385,7 @@ MonoBehaviour:
   - {fileID: 1065247326}
   - {fileID: 193026844}
   - {fileID: 2079520036}
-  spawnTime: 1.5
+  spawnTime: 1.25
   childrenList: []
   childSpeed: 80
   maxSpawnSize: 30
