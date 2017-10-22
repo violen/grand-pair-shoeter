@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: b5a97e821d043e4459139cf1279ffcbd
-timeCreated: 1508608585
+guid: d1101aea430cb274ca9a6addf33bf093
+timeCreated: 1508631209
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Asset Kinder 1_0
-    21300002: Asset Kinder 1_1
-  externalObjects: {}
+    21300000: Hoolikids_0
+    21300002: Hoolikids_1
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -48,7 +47,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -60,7 +59,6 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -69,25 +67,6 @@ TextureImporter:
     overridden: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -98,13 +77,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asset Kinder 1_0
+      name: Hoolikids_0
       rect:
         serializedVersion: 2
         x: 9
         y: 15
-        width: 178
-        height: 308
+        width: 157
+        height: 301
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,13 +91,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Asset Kinder 1_1
+      name: Hoolikids_1
       rect:
         serializedVersion: 2
         x: 207
         y: 13
-        width: 178
-        height: 307
+        width: 155
+        height: 298
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
