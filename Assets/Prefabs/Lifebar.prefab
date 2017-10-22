@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 224038127296044706}
   - component: {fileID: 222959838124480034}
   - component: {fileID: 114693907841044118}
-  - component: {fileID: 114265993080370692}
   - component: {fileID: 114465165913332104}
   m_Layer: 5
   m_Name: Lifebar
@@ -30,17 +29,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114265993080370692
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1100285114673290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114465165913332104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2aa621712ea1345a6b09b2977e3ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 114843682974130262, guid: 00e3a82c7e3fd354092a9dd73e9b0aec, type: 2}
+  lifepointsController: {fileID: 0}
 --- !u!114 &114693907841044118
 MonoBehaviour:
   m_ObjectHideFlags: 1
