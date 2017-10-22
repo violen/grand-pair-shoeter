@@ -34,27 +34,21 @@ public class GrandpaController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<Animator>().SetBool("walking", false);
-        this.GetComponent<Animator>().SetBool("throwing", false);
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             this.transform.position += Vector3.left * grandpaMoveSpeed * Time.deltaTime;
-            this.GetComponent<Animator>().SetBool("walking", true);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             this.transform.position += Vector3.right * grandpaMoveSpeed * Time.deltaTime;
-            this.GetComponent<Animator>().SetBool("walking", true);
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
             this.transform.position += Vector3.up * grandpaMoveSpeed * Time.deltaTime;
-            this.GetComponent<Animator>().SetBool("walking", true);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             this.transform.position += Vector3.down * grandpaMoveSpeed * Time.deltaTime;
-            this.GetComponent<Animator>().SetBool("walking", true);
         }
 
         float newX = Mathf.Clamp(this.transform.position.x, xMinPosition, xMaxPosition);
@@ -63,7 +57,6 @@ public class GrandpaController : MonoBehaviour {
 
         if (Time.time >= timestamp && Input.GetKeyDown(KeyCode.Space))
         {
-            this.GetComponent<Animator>().SetBool("throwing", true);
             GameObject shoot = Instantiate(bullet, this.transform.position, Quaternion.identity) as GameObject;
             shoot.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletMoveSpeed, 0);
             timestamp = Time.time + timeBetweenShots;
