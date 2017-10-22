@@ -9,6 +9,7 @@ public class Main : MonoBehaviour {
     public int childrenToKill = 20;
     private int childrenKilled = 0;
     private bool bossDefeated = false;
+    private bool bossSpawned = false;
 
     private bool levelEnded = false;
     private bool gameEnded = false;
@@ -56,6 +57,11 @@ public class Main : MonoBehaviour {
         // here goes render for fixed rates
     }
 
+    public void SetBossDefeated()
+    {
+        bossDefeated = true;
+    }
+
     public void EndLevel()
     {
         if (childrenKilled >= childrenToKill)
@@ -69,7 +75,9 @@ public class Main : MonoBehaviour {
             {
                 if (LevelHasBoss())
                 {
+                    if (bossSpawned) return;
                     BossSpawn.GetInstance().ReleaseTheBeast();
+                    bossSpawned = true;
                 } else
                 {
                     // fallback if not all lvls get a Boss ;)
@@ -95,7 +103,7 @@ public class Main : MonoBehaviour {
 
     private bool LevelHasBoss()
     {
-        String[] bossLevels = { "none", /* "levelstandard" , "strandlevel", "fussball" */};
+        String[] bossLevels = {"levelstandard" /*, "strandlevel", "fussball" */};
         foreach (var level in bossLevels)
         {
             if (level.Contains(SceneManager.GetActiveScene().name)) return true;
