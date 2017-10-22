@@ -1,4 +1,5 @@
-﻿using System;
+﻿using UnityEngine.SceneManagement;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,7 +62,10 @@ public class LifepointsController : MonoBehaviour {
         switch (eventname)
         {
             case "childhit":
-                decrease = 2;
+                var levelname = SceneManager.GetActiveScene().name;
+                String[] stages = { "fussball", "strandlevel", "levelstandard" };
+
+                decrease = 10;
                 break;
             case "bosshit":
                 decrease = 100;
