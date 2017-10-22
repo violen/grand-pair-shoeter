@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 477106505}
   - component: {fileID: 477106504}
   - component: {fileID: 477106507}
+  - component: {fileID: 477106508}
   m_Layer: 0
   m_Name: StartButton
   m_TagString: Untagged
@@ -363,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9843138, g: 0.5803922, b: 0.24313727, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -401,6 +402,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &477106508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 477106502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2887c5c7399b442b341b8ca9138854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 477106505}
+  interval: 1
+  startDelay: 0.5
+  currentState: 1
+  defaultState: 1
 --- !u!1 &1018182817
 GameObject:
   m_ObjectHideFlags: 0
