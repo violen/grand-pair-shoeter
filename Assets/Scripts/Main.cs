@@ -34,6 +34,10 @@ public class Main : MonoBehaviour {
         {
             levelEnded = true;
             Debug.Log("Level Ended");
+            if (SceneManager.GetActiveScene().name == "levelstandard")
+            {
+                FindObjectOfType<LoadManager>().LoadLevel("strandlevel");
+            }
         }
     }
 
