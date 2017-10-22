@@ -15,6 +15,8 @@ public class GrandpaController : MonoBehaviour {
     private float yMaxPosition;
     private float timestamp;
 
+    private Animator animator;
+
     // Use this for initialization
     void Start()
     {
@@ -29,6 +31,7 @@ public class GrandpaController : MonoBehaviour {
         Vector3 topmost = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.95f, distance));
         yMinPosition = bottommost.y;
         yMaxPosition = topmost.y;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -57,6 +60,7 @@ public class GrandpaController : MonoBehaviour {
 
         if (Time.time >= timestamp && Input.GetKeyDown(KeyCode.Space))
         {
+            animator.SetTrigger("throw");
             GameObject shoot = Instantiate(bullet, this.transform.position, Quaternion.identity) as GameObject;
             shoot.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletMoveSpeed, 0);
             timestamp = Time.time + timeBetweenShots;
