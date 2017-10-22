@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossModel : MonoBehaviour {
 
-    public int hitpoints = 20;
+    public int hitpoints = 10;
     private int hitsConsumed = 0;
     public Transform player;
     public float bossMoveSpeed = 100f;
