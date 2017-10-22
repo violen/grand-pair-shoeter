@@ -14,6 +14,23 @@ public class BossModel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(hitpoints <= 0)
+        {
+            Destroy(gameObject);
+        }
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Shoe")
+        {
+            Destroy(collision.gameObject);
+            hitpoints--;
+        }
+        if(collision.gameObject.tag == "Football")
+        {
+            Destroy(collision.gameObject);
+            hitpoints -= 5;
+        }
+    }
 }
