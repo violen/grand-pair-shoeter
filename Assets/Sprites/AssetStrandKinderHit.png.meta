@@ -1,12 +1,16 @@
 fileFormatVersion: 2
-guid: ff3c98bd24cdad44091fe66c7d296780
-timeCreated: 1508670235
+guid: fb28158b26011784191927453cdb23d3
+timeCreated: 1508674728
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Asset Strand Kinder_0
-    21300002: Asset Strand Kinder_1
-  externalObjects: {}
+    21300000: AssetStrandKinderHit_0
+    21300002: AssetStrandKinderHit_1
+    21300004: AssetStrandKinderHit_2
+    21300006: AssetStrandKinderHit_3
+    21300008: AssetStrandKinderHit_4
+    21300010: AssetStrandKinderHit_5
+    21300012: AssetStrandKinderHit_6
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -48,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -60,7 +64,6 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -69,7 +72,6 @@ TextureImporter:
     overridden: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -80,29 +82,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asset Strand Kinder_0
+      name: AssetStrandKinderHit_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 7
-        width: 180
-        height: 308
+        x: 0
+        y: 0
+        width: 187
+        height: 315
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Asset Strand Kinder_1
+      name: AssetStrandKinderHit_1
       rect:
         serializedVersion: 2
-        x: 206
-        y: 5
-        width: 179
-        height: 307
+        x: 193
+        y: 0
+        width: 192
+        height: 312
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
