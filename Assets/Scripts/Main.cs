@@ -81,11 +81,11 @@ public class Main : MonoBehaviour {
             GUI.BeginGroup(new Rect(Screen.width / 2 - 50, Screen.height / 2 - 50, 100, 90));
 
             GUI.Box(new Rect(0, 0, 100, 90), "Pause");
-            if (GUI.Button(new Rect(10, 30, 80, 20), "Weiter"))
+            if (GUI.Button(new Rect(10, 30, 80, 20), "Resume"))
             {
                 ResumeGame();
             }
-            if (GUI.Button( new Rect(10, 60, 80, 20), "Beenden"))
+            if (GUI.Button( new Rect(10, 60, 80, 20), "Exit"))
             {
                 Application.Quit();
             }
