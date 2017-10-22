@@ -10,6 +10,7 @@ TagManager:
   - Undefined
   - Boss
   - Shoe
+  - Football
   layers:
   - Default
   - TransparentFX
