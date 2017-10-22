@@ -48,13 +48,29 @@ public class LifepointsController : MonoBehaviour {
         {
             lifepoints = lifepoints - (lifepoints - maxLifepoints);
         }
-        AddScore();
+        AddScore("takePill");
     }
 
-    public static void AddScore()
+    public static void AddScore(String eventname)
     {
-        score += 100;
+        switch (eventname)
+        {
+            case "childkill":
+                score += 100;
+                break;
+            case "bosshit":
+                score += 50;
+                break;
+            case "bosskill":
+                score += 300;
+                break;
+            case "takePill":
+                score += 150;
+                break;
+        }
+
     }
+    
 
     public static void DecreaseLifePoints(String eventname)
     {

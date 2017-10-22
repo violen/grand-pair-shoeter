@@ -28,7 +28,7 @@ public class BulletController : MonoBehaviour {
             Camera.main.GetComponent<Main>().killedAChild();
             Destroy(child);
             Destroy(gameObject);
-            LifepointsController.AddScore();
+            LifepointsController.AddScore("childkill");
             float randomScream = UnityEngine.Random.value;
             if(randomScream > 0.5f) { 
                 AudioSource.PlayClipAtPoint(childScream[0], Camera.main.transform.position, 1f);

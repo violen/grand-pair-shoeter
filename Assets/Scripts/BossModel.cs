@@ -21,6 +21,7 @@ public class BossModel : MonoBehaviour {
         if (hitpoints <= 0)
         {
             Destroy(gameObject);
+            LifepointsController.AddScore("bosskill");
             AudioSource.PlayClipAtPoint(bossScream, Camera.main.transform.position, 1f);
         }
         float step = bossMoveSpeed * Time.deltaTime;
@@ -32,11 +33,13 @@ public class BossModel : MonoBehaviour {
         if (collision.gameObject.tag == "Shoe")
         {
             Destroy(collision.gameObject);
+            LifepointsController.AddScore("bosshit");
             hitpoints--;
         }
         if(collision.gameObject.tag == "Football")
         {
             Destroy(collision.gameObject);
+            LifepointsController.AddScore("bosshit");
             hitpoints -= 5;
         }
     }
