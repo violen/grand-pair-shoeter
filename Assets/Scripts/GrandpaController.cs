@@ -84,5 +84,9 @@ public class GrandpaController : MonoBehaviour {
         {
             LifepointsController.decreaseLifePoints("childhit");
         }
+        if (collision.gameObject.tag == "Boss")
+        {
+            LifepointsController.decreaseLifePoints("bosshit");
+        }
     }
 }

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114419532357672880}
   m_Layer: 0
   m_Name: Boss Strand
-  m_TagString: Child
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -118,6 +118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoints: 20
+  player: {fileID: 4324640524812076, guid: 3a0d664c920532f44821013191abfcaf, type: 2}
+  bossMoveSpeed: 100
+  bossScream: {fileID: 0}
 --- !u!212 &212834562258583400
 SpriteRenderer:
   m_ObjectHideFlags: 1
