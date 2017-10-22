@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114398223663944304}
   m_Layer: 0
   m_Name: BossGarten
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +122,8 @@ MonoBehaviour:
   player: {fileID: 4324640524812076, guid: 3a0d664c920532f44821013191abfcaf, type: 2}
   bossMoveSpeed: 80
   bossScream: {fileID: 8300000, guid: b7c7e8e257733ac4e81694c6cdae4c59, type: 3}
+  hitShoe: {fileID: 8300000, guid: d9ca5c52c9b5c2b46b3e13c0a54f8f51, type: 3}
+  hitBall: {fileID: 8300000, guid: 5094f9b0ed63420479e528a963ddff8c, type: 3}
 --- !u!212 &212609582143165176
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -8,6 +8,7 @@ public class GrandpaController : MonoBehaviour {
     public GameObject bullet;
     public float bulletMoveSpeed = 5f;
     public float timeBetweenShots = 0.5f;
+    public AudioClip wurf;
 
     private float xMinPosition;
     private float xMaxPosition;
@@ -64,6 +65,7 @@ public class GrandpaController : MonoBehaviour {
             GameObject shoot = Instantiate(bullet, new Vector3((this.transform.position.x + 30f), this.transform.position.y, this.transform.position.z), Quaternion.identity) as GameObject;
             shoot.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletMoveSpeed, 0);
             timestamp = Time.time + timeBetweenShots;
+            AudioSource.PlayClipAtPoint(wurf, Camera.main.transform.position, 20f);
         }
     }
 

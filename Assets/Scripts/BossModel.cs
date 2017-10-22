@@ -10,6 +10,8 @@ public class BossModel : MonoBehaviour {
     public Transform player;
     public float bossMoveSpeed = 100f;
     public AudioClip bossScream;
+    public AudioClip hitShoe;
+    public AudioClip hitBall;
 
     // Use this for initialization
     void Start () {
@@ -23,7 +25,7 @@ public class BossModel : MonoBehaviour {
         {
             Destroy(gameObject);
             LifepointsController.AddScore("bosskill");
-            AudioSource.PlayClipAtPoint(bossScream, Camera.main.transform.position, 1f);
+            AudioSource.PlayClipAtPoint(bossScream, Camera.main.transform.position, 1.5f);
             FindObjectOfType<Main>().SetBossDefeated();
         }
         float step = bossMoveSpeed * Time.deltaTime;
@@ -38,6 +40,7 @@ public class BossModel : MonoBehaviour {
             LifepointsController.AddScore("bosshit");
             hitpoints--;
             animator.SetTrigger("hit");
+            AudioSource.PlayClipAtPoint(hitShoe, Camera.main.transform.position, 15f);
 
         }
         if(collision.gameObject.tag == "Football")
@@ -46,6 +49,7 @@ public class BossModel : MonoBehaviour {
             LifepointsController.AddScore("bosshit");
             hitpoints -= 5;
             animator.SetTrigger("hit");
+            AudioSource.PlayClipAtPoint(hitBall, Camera.main.transform.position, 15f);
         }
     }
 }
