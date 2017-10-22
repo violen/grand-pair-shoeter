@@ -120,7 +120,7 @@ MonoBehaviour:
   grandpaMoveSpeed: 400
   bullet: {fileID: 1475467187659110, guid: 174ca6ba5c8ab4248ab80624382e31f8, type: 2}
   bulletMoveSpeed: 3000
-  timeBetweenShots: 0.8
+  timeBetweenShots: 0.1
 --- !u!212 &212873805268307098
 SpriteRenderer:
   m_ObjectHideFlags: 1
