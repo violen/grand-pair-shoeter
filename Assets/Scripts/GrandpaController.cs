@@ -80,4 +80,12 @@ public class GrandpaController : MonoBehaviour {
             Destroy(collision.gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Child")
+        {
+            LifepointsController.decreaseLifePoints("childhit");
+        }
+    }
 }
