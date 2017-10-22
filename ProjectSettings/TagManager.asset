@@ -8,6 +8,7 @@ TagManager:
   - Lifepoints
   - Pille
   - Undefined
+  - Boss
   layers:
   - Default
   - TransparentFX
