@@ -103,7 +103,7 @@ public class Main : MonoBehaviour {
 
     private bool LevelHasBoss()
     {
-        String[] bossLevels = {"levelstandard" /*, "strandlevel", "fussball" */};
+        String[] bossLevels = {"levelstandard" /*, "strandlevel"*/, "fussball" };
         foreach (var level in bossLevels)
         {
             if (level.Contains(SceneManager.GetActiveScene().name)) return true;

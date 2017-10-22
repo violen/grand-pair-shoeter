@@ -36,20 +36,22 @@ public class BossModel : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Shoe")
         {
+            AudioSource.PlayClipAtPoint(hitShoe, Camera.main.transform.position, 15f);
             Destroy(collision.gameObject);
             LifepointsController.AddScore("bosshit");
             hitpoints--;
             animator.SetTrigger("hit");
-            AudioSource.PlayClipAtPoint(hitShoe, Camera.main.transform.position, 15f);
+            
 
         }
         if(collision.gameObject.tag == "Football")
         {
+            AudioSource.PlayClipAtPoint(hitBall, Camera.main.transform.position, 15f);
             Destroy(collision.gameObject);
             LifepointsController.AddScore("bosshit");
             hitpoints -= 5;
             animator.SetTrigger("hit");
-            AudioSource.PlayClipAtPoint(hitBall, Camera.main.transform.position, 15f);
+            
         }
     }
 }
