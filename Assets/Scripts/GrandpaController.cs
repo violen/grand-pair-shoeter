@@ -83,6 +83,7 @@ public class GrandpaController : MonoBehaviour {
         if (collision.gameObject.tag == "Child")
         {
             LifepointsController.DecreaseLifePoints("childhit");
+            animator.SetTrigger("hit");
         }
         if (collision.gameObject.tag == "Boss")
         {
