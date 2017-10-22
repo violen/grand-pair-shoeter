@@ -22,6 +22,14 @@ public class Main : MonoBehaviour {
         Screen.SetResolution(1024, 768, true, 60);
     }
 
+    private void Awake()
+    {
+        if (SceneManager.GetActiveScene().name == "levelstandard")
+        {
+            if (LifepointsController.score > 0) LifepointsController.score = 0;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -138,11 +146,7 @@ public class Main : MonoBehaviour {
         if (lifePoints <= 0)
         {
             // load GameOver
-
-
-            // placeholder show pause....
-            showMenu = true;
-            Time.timeScale = 0;
+            FindObjectOfType<LoadManager>().LoadLevel("gameOver");
         }
     }
 }
