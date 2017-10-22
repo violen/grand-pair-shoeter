@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14105f89ee3fbaf4d84e38ee2bdca660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1767209768695448, guid: 83558fcf193ec7f44b4f8cd288b5396a, type: 2}
+  child: {fileID: 1767209768695448, guid: 449e56d165891094dbef59072eaa2396, type: 2}
   spawns:
   - {fileID: 1065247326}
   - {fileID: 193026844}
@@ -536,6 +536,12 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114620605630273660, guid: e2e1467a2574096408d8b0edd81d9b7c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dcf0f03e18eee8a4e92de0116f3cdd63,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2e1467a2574096408d8b0edd81d9b7c, type: 2}
   m_IsPrefabParent: 0
