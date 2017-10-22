@@ -16,13 +16,9 @@ public class Main : MonoBehaviour {
     private bool showMenu = false;
     private bool gamePaused = false;
 
-    private String currentLevelName;
-
 	// Use this for initialization
 	void Start () {
         Screen.SetResolution(1024, 768, true, 60);
-
-        currentLevelName = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -58,14 +54,7 @@ public class Main : MonoBehaviour {
             {
                 levelEnded = true;
                 Debug.Log("Level Ended");
-                if (currentLevelName == "levelstandard")
-                {
-                    FindObjectOfType<LoadManager>().LoadLevel("strandlevel");
-                }
-                else if (currentLevelName == "strandlevel")
-                {
-                    FindObjectOfType<LoadManager>().LoadLevel("fussball");
-                }
+                ChangeLevel();
             } else
             {
                 if (LevelHasBoss())
@@ -75,9 +64,22 @@ public class Main : MonoBehaviour {
                 {
                     // fallback if not all lvls get a Boss ;)
                     levelEnded = true;
+                    ChangeLevel();
                 }
             }
             
+        }
+    }
+
+    private void ChangeLevel()
+    {
+        if (SceneManager.GetActiveScene().name == "levelstandard")
+        {
+            FindObjectOfType<LoadManager>().LoadLevel("strandlevel");
+        }
+        else if (SceneManager.GetActiveScene().name == "strandlevel")
+        {
+            FindObjectOfType<LoadManager>().LoadLevel("fussball");
         }
     }
 
@@ -86,7 +88,7 @@ public class Main : MonoBehaviour {
         String[] bossLevels = { "none", /* "levelstandard" , "strandlevel", "fussball" */};
         foreach (var level in bossLevels)
         {
-            if (level.Contains(currentLevelName)) return true;
+            if (level.Contains(SceneManager.GetActiveScene().name)) return true;
         }
         return false;
     }
