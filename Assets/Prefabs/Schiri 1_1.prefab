@@ -58,7 +58,7 @@ Rigidbody2D:
   m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   hitpoints: 100
   player: {fileID: 4324640524812076, guid: 46dc653076fb5284396b910e222d37de, type: 2}
-  bossMoveSpeed: 100
+  bossMoveSpeed: 120
   bossScream: {fileID: 8300000, guid: f0cc4ea5d1e6e194e9d92866686646da, type: 3}
   hitShoe: {fileID: 8300000, guid: f8efe00ed60ff034696778b72b6a5374, type: 3}
   hitBall: {fileID: 8300000, guid: c88e34a910cce904caabbe0ec0646344, type: 3}
