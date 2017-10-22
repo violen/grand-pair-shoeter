@@ -63,6 +63,9 @@ public class LifepointsController : MonoBehaviour {
             case "childhit":
                 decrease = 2;
                 break;
+            case "bosshit":
+                decrease = 100;
+                break;
         }
         if (decrease > 0)
         {
